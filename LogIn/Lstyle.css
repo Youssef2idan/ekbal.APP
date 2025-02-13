@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #0E4BF1;
+    --panel-color: #FFF;
+    --text-color: #000;
+    --border-color: #e0e0e0;
+    --error-color: #dc3545;
+    --background-color: #f4f4f4;
+}
+
+body.dark {
+    --primary-color: #3A3B3C;
+    --panel-color: #242526;
+    --text-color: #CCC;
+    --border-color: #4D4C4C;
+    --background-color: #3A3B3C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    direction: rtl;
+    transition: all 0.3s ease;
+}
+
+.login-container {
+    background: var(--panel-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: 5rem;
+}
+
+.login-container h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.header .navtop {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.7rem;
+    padding: 0 1.2rem;
+    justify-content: space-between;
+    background-color: var(--panel-color);
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(14, 75, 241, 0.1);
+}
+
+.header .navtop .logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.mode-toggle {
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 35px;
+    border-radius: 25px;
+    background-color: var(--border-color);
+    cursor: pointer;
+}
+
+.switch:before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    background-color: var(--panel-color);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+body.dark .switch:before {
+    left: 15px;
+    background-color: var(--secondary-color);
+}
+
+.login-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.error-message {
+    color: var(--error-color);
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.login-btn,
+.my-data-btn {
+    flex: 1;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.my-data-btn {
+    background-color: var(--panel-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.login-btn:hover,
+.my-data-btn:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+    .button-container {
+        flex-direction: column;
+    }
+}
+
+/* Add these styles after your existing styles */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    z-index: 9999;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--panel-color);
+    border-top: 5px solid var(--secondary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
