@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Check if user is logged in
+    const loggedInStudent = JSON.parse(localStorage.getItem('loggedInStudent'));
+    if (!loggedInStudent) {
+        window.location.href = '../login.html';
+        return;
+    }
+
     const modal = document.getElementById('registrationModal');
     const joinButtons = document.querySelectorAll('.join-btn');
     const closeModal = document.querySelector('.close-modal');
