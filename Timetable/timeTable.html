@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link rel="stylesheet" href="tStyle.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navtop">
+            <a href="../Index.html" class="logo">Class Timetable</a>
+            <div class="mode-toggle">
+                <span class="switch"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="selection-section">
+            <select id="gradeSelect" class="input-field">
+                <option value="">Select Grade</option>
+                <!-- Middle School -->
+                <optgroup label="Middle School">
+                    <option value="m1">Middle 1</option>
+                    <option value="m2">Middle 2</option>
+                </optgroup>
+            </select>
+            
+            <select id="classSelect" class="input-field" disabled>
+                <option value="">Select Class</option>
+                <option value="a">Class A</option>
+                <option value="b">Class B</option>
+                <option value="c">Class C</option>
+                <option value="d">Class D</option>
+            </select>
+
+            <button id="getMyData" class="my-data-btn">My Data</button>
+        </div>
+
+        <div class="timetable-container">
+            <div class="placeholder-message" id="default-text">Your TimeTable Will Appear Here</div>
+            <div class="image-container">
+                <img src="https://i.ibb.co/z4cjF8w/TABLE-JUNIOR-1.jpg" class="timetable-image" id="j4a-timetable" alt="Junior Four Class A Timetable">
+                <img src="https://i.ibb.co/g3Y5Rfc/TABLE-JUNIOR-2.jpg" class="timetable-image" id="j4b-timetable" alt="Junior Four Class B Timetable">
+                <img src="https://i.ibb.co/dGnYm0w/TABLE-JUNIOR-3.jpg" class="timetable-image" id="j4c-timetable" alt="Junior Four Class C Timetable">
+                <img src="https://i.ibb.co/vPJRvq1/TABLE-JUNIOR-4.jpg" class="timetable-image" id="j4d-timetable" alt="Junior Four Class D Timetable">
+                <img src="https://i.ibb.co/sHYz7rR/TABLE-JUNIOR-5.jpg" class="timetable-image" id="j5a-timetable" alt="Junior Five Class A Timetable">
+                <img src="https://i.ibb.co/7G9wHmr/TABLE-JUNIOR-6.jpg" class="timetable-image" id="j5b-timetable" alt="Junior Five Class B Timetable">
+                <img src="https://i.ibb.co/NYzk5VF/TABLE-JUNIOR-7.jpg" class="timetable-image" id="j5c-timetable" alt="Junior Five Class C Timetable">
+                <img src="https://i.ibb.co/2YQjr0w/TABLE-JUNIOR-8.jpg" class="timetable-image" id="j5d-timetable" alt="Junior Five Class D Timetable">
+                <img src="https://i.ibb.co/ZYVHqQG/TABLE-JUNIOR-10.jpg" class="timetable-image" id="j6a-timetable" alt="Junior Six Class A Timetable">
+                <img src="https://i.ibb.co/MhrQw16/TABLE-JUNIOR-11.jpg" class="timetable-image" id="j6b-timetable" alt="Junior Six Class B Timetable">
+                <img src="https://i.ibb.co/7GCnnq3/TABLE-JUNIOR-12.jpg" class="timetable-image" id="j6c-timetable" alt="Junior Six Class C Timetable">
+                <img src="https://i.ibb.co/n8VLc5z/M1.png" class="timetable-image" id="m1a-timetable" alt="Middle One Class A Timetable">
+                <img src="https://i.ibb.co/chK2vJh/1B.jpg" class="timetable-image" id="m1b-timetable" alt="Middle One Class B Timetable">
+                <img src="https://i.ibb.co/qmLs9Ht/1C.jpg" class="timetable-image" id="m1c-timetable" alt="Middle One Class C Timetable">
+                <img src="https://i.ibb.co/zJj00BY/1D.jpg" class="timetable-image" id="m1d-timetable" alt="Middle One Class D Timetable">
+                <img src="https://i.ibb.co/zV1zTSW/1-A-page-0001.jpg" class="timetable-image" id="s1a-timetable" alt="Senior One Class A Timetable">
+                <img src="https://i.ibb.co/zNknjmB/1-B-page-0001.jpg" class="timetable-image" id="s1b-timetable" alt="Senior One Class B Timetable">
+                <img src="https://i.ibb.co/gDWmR4w/1-C-page-0001.jpg" class="timetable-image" id="s1c-timetable" alt="Senior One Class C Timetable">
+                <img src="https://i.ibb.co/M9PTV4f/1d-page-0001.jpg" class="timetable-image" id="s1d-timetable" alt="Senior One Class D Timetable">
+                <img src="https://i.ibb.co/WDY1CmT/2A-1.jpg" class="timetable-image" id="s2a-timetable" alt="Senior Two Class A Timetable">
+                <img src="https://i.ibb.co/4pvJD1J/2B-1.jpg" class="timetable-image" id="s2b-timetable" alt="Senior Two Class B Timetable">
+                <img src="https://i.ibb.co/gWpGPps/2C-1.jpg" class="timetable-image" id="s2c-timetable" alt="Senior Two Class C Timetable">
+                <img src="https://i.ibb.co/h90XR7Y/2D-1.jpg" class="timetable-image" id="s2d-timetable" alt="Senior Two Class D Timetable">
+                <img src="https://i.ibb.co/kXFtyTZ/2A.jpg" class="timetable-image" id="m2a-timetable" alt="Middle Two Class A Timetable">
+                <img src="https://i.ibb.co/DwnHM6J/2B.jpg" class="timetable-image" id="m2b-timetable" alt="Middle Two Class B Timetable">
+                <img src="https://i.ibb.co/zNXPSkW/2C.jpg" class="timetable-image" id="m2c-timetable" alt="Middle Two Class C Timetable">
+                <img src="https://i.ibb.co/GRxsTXH/2D.jpg" class="timetable-image" id="m2d-timetable" alt="Middle Two Class D Timetable">
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bottom Navigation -->
+    <nav class="navbar">
+        <a href="../Index.html" class="nav-link">
+            <svg viewBox="0 0 24 24" class="nav-icon">
+                <path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm9-8.586 6 6V20H6v-9.586l6-6z"/>
+            </svg>
+            <span>Home</span>
+        </a>
+        <a href="../Marks/marks.html" class="nav-link">
+            <svg viewBox="0 0 24 24" class="nav-icon">
+                <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"/>
+            </svg>
+            <span>Marks</span>
+        </a>
+        <a href="timetable.html" class="nav-link active">
+            <svg viewBox="0 0 24 24" class="nav-icon">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zM5 20V7h14v13H5z"/>
+            </svg>
+            <span>Timetable</span>
+        </a>
+        <a href="../Activities/Activities.html" class="nav-link">
+            <svg viewBox="0 0 24 24" class="nav-icon">
+                <path d="M20 2H4c-1.103 0-2 .897-2 2v18l4-4h14c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14H5.17l-1.17 1.17V4h16v12z"/>
+            </svg>
+            <span>Activities</span>
+        </a>
+        <a href="#" class="nav-link" id="moreBtn">
+            <svg viewBox="0 0 24 24" class="nav-icon">
+                <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            <span>More</span>
+        </a>
+    </nav>
+
+    <!-- More Menu -->
+    <div class="more-menu" id="moreMenu">
+        <div class="menu-header">
+            <h3>More Options</h3>
+            <button class="close-menu" id="closeMenu">×</button>
+        </div>
+        <div class="menu-items">
+            <a href="#" class="menu-item">
+                <svg viewBox="0 0 24 24" class="menu-icon">
+                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+                <span>Groups</span>
+            </a>
+            <a href="#" class="menu-item">
+                <svg viewBox="0 0 24 24" class="menu-icon">
+                    <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0-2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"/>
+                </svg>
+                <span>Videos</span>
+            </a>
+            <a href="#" class="menu-item">
+                <svg viewBox="0 0 24 24" class="menu-icon">
+                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                </svg>
+                <span>Sheets</span>
+            </a>
+            <a href="#" class="menu-item">
+                <svg viewBox="0 0 24 24" class="menu-icon">
+                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                    <path d="M11 11h2v6h-2zm0-4h2v2h-2z"/>
+                </svg>
+                <span>About</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="tScript.js"></script>
+</body>
+</html>
