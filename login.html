@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="./LogIn/Lstyle.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navtop">
+            <a href="#" class="logo">تسجيل الدخول</a>
+            <div class="mode-toggle">
+                <span class="switch"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Add loader -->
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+    </div>
+
+    <div class="login-container" style="display: none;">
+        <h2>تسجيل دخول الطالب</h2>
+        <input type="text" id="studentName" placeholder="اسم الطالب" class="input-field" required>
+        <input type="text" id="studentCode" placeholder="أدخل كود الطالب" class="input-field" required>
+        <input type="tel" id="mobileNumber" placeholder="رقم الموبايل" class="input-field" pattern="[0-9]{11}" required>
+        <select id="gradeSelect" class="input-field" required>
+            <option value="">اختر الصف</option>
+            <option value="m1">Middle 1</option>
+            <option value="m2">Middle 2</option>
+        </select>
+        <select id="classSelect" class="input-field" required>
+            <option value="">اختر الفصل</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+            <option value="d">D</option>
+        </select>
+        <div class="button-container">
+            <button onclick="login()" class="login-btn">تسجيل الدخول</button>
+            <button id="getMyData" class="my-data-btn">بياناتي</button>
+        </div>
+        <p id="errorMessage" class="error-message"></p>
+    </div>
+    <script src="./LogIn/Lscript.js"></script>
+</body>
+</html>
