@@ -37,6 +37,13 @@ document.addEventListener('click', (e) => {
 
 // Marks functionality
 document.addEventListener('DOMContentLoaded', () => {
+    // Check if user is logged in
+    const loggedInStudent = JSON.parse(localStorage.getItem('loggedInStudent'));
+    if (!loggedInStudent) {
+        window.location.href = '../login.html';
+        return;
+    }
+
     const gradeSelect = document.getElementById('gradeSelect');
     const studentCode = document.getElementById('studentCode');
     const getMarksBtn = document.getElementById('getMarks');
